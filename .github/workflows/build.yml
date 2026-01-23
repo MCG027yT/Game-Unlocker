@@ -39,7 +39,7 @@ jobs:
       run: mv app/build/outputs/apk/debug/app-debug.apk game-unlocker-v${{ steps.version.outputs.app_version }}.apk
 
     - name: Upload APK
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: Game Unlocker
         path: game-unlocker-v${{ steps.version.outputs.app_version }}.apk
