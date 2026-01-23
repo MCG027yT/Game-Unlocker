@@ -42,62 +42,6 @@ You can untick the game you don't want to spoof for the module scope. Force stop
 
 Report any suggestions/issues with games [here](https://github.com/rushiranpise/Game-Unlocker/issues)
 
-## Supported Games
-
-<details>
-  <summary>Click to expand the list of supported games</summary>
-
-- https://play.google.com/store/apps/details?id=com.YoStar.AetherGazer&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.activision.callofudty.warzone&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.dts.freefiremax&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.dts.freefireth&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.ea.gp.apexlegendsmobilefps&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.epicgames.portal&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftA9HM&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.garena.game.codm&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.garena.game.kgvn&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.garena.game.lmjx&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.levelinfinite.hotta.gp&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.levelinfinite.sgameGlobal&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.madfingergames.legends&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.mobile.legends&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.mobilelegends.mi&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.netease.lztgglobal&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.ngame.allstar.eu&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.pearlabyss.blackdesertm.gl&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.pearlabyss.blackdesertm&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.proximabeta.mf.uamo&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.pubg.imobile&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.pubg.krmobile&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.rekoo.pubgm&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.riotgames.league.teamfighttactics&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.riotgames.league.teamfighttacticstw&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.riotgames.league.teamfighttacticsvn&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.riotgames.league.wildrift&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.riotgames.league.wildrifttw&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.riotgames.league.wildriftvn&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.supercell.clashofclans&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.KiHan&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.lolm&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.tmgp.cf&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.tmgp.cod&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.tmgp.gnyx&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.tmgp.kr.codm&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.tmgp.pubgmhd&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.tencent.tmgp.sgame&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.vng.codmvn&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.vng.mlbbvn&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=com.vng.pubgmobile&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=jp.konami.pesam&hl=en&gl=US
-- https://play.google.com/store/apps/details?id=vng.games.revelation.mobile&hl=en&gl=US
-
-</details>
 
 ## License
 
