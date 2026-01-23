@@ -1,17 +1,14 @@
-package io.github.rushiranpise.gameunlocker;
+package com.incognitoDev.gameunlocker;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.util.Log;
 
 import java.lang.reflect.Field;
-import java.security.KeyStore;
 import java.util.Arrays;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
-import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
-import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 @SuppressLint("DiscouragedPrivateApi")
@@ -19,95 +16,109 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 public class GAMEUNLOCKER implements IXposedHookLoadPackage {
 
     private static final String TAG = GAMEUNLOCKER.class.getSimpleName();
+    // Packages to Spoof as OnePlus 5
+    private static final String[] packagesToChangeOP15 = {
+            "com.mobile.legends",
+            "com.garena.game.df",
+            "com.geode.launcher",
+            "com.kurogame.wutheringwavesglobal",
+            "com.tencent.ig",
+            "com.robtopx.geometryjump"
+    };
+
     // Packages to Spoof as ROG Phone 6
     private static final String[] packagesToChangeROG6 = {
-        "com.activision.callofduty.shooter",
-        "com.activision.callofudty.warzone",
-        "com.ea.gp.fifamobile",
-        "com.gameloft.android.ANMP.GloftA9HM",
-        "com.madfingergames.legends",
-        "com.pearlabyss.blackdesertm",
-        "com.pearlabyss.blackdesertm.gl"
+            "com.activision.callofduty.shooter",
+            "com.activision.callofudty.warzone",
+            "com.ea.gp.fifamobile",
+            "com.gameloft.android.ANMP.GloftA9HM",
+            "com.madfingergames.legends",
+            "com.pearlabyss.blackdesertm",
+            "com.pearlabyss.blackdesertm.gl"
     };
 
     // Packages to Spoof as Xperia 5
     private static final String[] packagesToChangeXP5 = {
-        "com.garena.game.codm",
-        "com.tencent.tmgp.kr.codm",
-        "com.vng.codmvn",
-        "com.garena.game.kgvn"
+            "com.garena.game.codm",
+            "com.tencent.tmgp.kr.codm",
+            "com.vng.codmvn",
+            "com.garena.game.kgvn"
     };
 
     // Packages to Spoof as OnePlus 8 Pro
     private static final String[] packagesToChangeOP8P = {
-        "com.netease.lztgglobal",
-        "com.pubg.imobile",
-        "com.pubg.krmobile",
-        "com.rekoo.pubgm",
-        "com.riotgames.league.wildrift",
-        "com.riotgames.league.wildrifttw",
-        "com.riotgames.league.wildriftvn",
-        "com.riotgames.league.teamfighttactics",
-        "com.riotgames.league.teamfighttacticstw",
-        "com.riotgames.league.teamfighttacticsvn",
-        "com.tencent.ig",
-        "com.tencent.tmgp.pubgmhd",
-        "com.vng.pubgmobile",
-        "vng.games.revelation.mobile",
-        "com.ngame.allstar.eu",
-        "com.mojang.minecraftpe",
-        "com.YoStar.AetherGazer",
-        "com.miHoYo.GenshinImpact",
-        "com.garena.game.lmjx"
+            "com.netease.lztgglobal",
+            "com.pubg.imobile",
+            "com.pubg.krmobile",
+            "com.rekoo.pubgm",
+            "com.riotgames.league.wildrift",
+            "com.riotgames.league.wildrifttw",
+            "com.riotgames.league.wildriftvn",
+            "com.riotgames.league.teamfighttactics",
+            "com.riotgames.league.teamfighttacticstw",
+            "com.riotgames.league.teamfighttacticsvn",
+            "com.tencent.tmgp.pubgmhd",
+            "com.vng.pubgmobile",
+            "vng.games.revelation.mobile",
+            "com.ngame.allstar.eu",
+            "com.mojang.minecraftpe",
+            "com.YoStar.AetherGazer",
+            "com.miHoYo.GenshinImpact",
+            "com.garena.game.lmjx"
     };
 
     // Packages to Spoof as OnePlus 9 Pro
     private static final String[] packagesToChangeOP9P = {
-        "com.epicgames.fortnite",
-        "com.epicgames.portal",
-        "com.tencent.lolm",
-        "jp.konami.pesam"
+            "com.epicgames.fortnite",
+            "com.epicgames.portal",
+            "com.tencent.lolm",
+            "jp.konami.pesam"
     };
 
     // Packages to Spoof as Mi 11T Pro
     private static final String[] packagesToChangeMI11TP = {
-        "com.ea.gp.apexlegendsmobilefps",
-        "com.mobilelegends.mi",
-        "com.levelinfinite.hotta.gp",
-        "com.supercell.clashofclans",
-        "com.vng.mlbbvn"
+            "com.ea.gp.apexlegendsmobilefps",
+            "com.mobilelegends.mi",
+            "com.levelinfinite.hotta.gp",
+            "com.supercell.clashofclans",
+            "com.vng.mlbbvn"
     };
 
     // Packages to Spoof as Xiaomi 13 Pro
     private static final String[] packagesToChangeMI13P = {
-        "com.levelinfinite.sgameGlobal",
-        "com.tencent.tmgp.sgame"
+            "com.levelinfinite.sgameGlobal",
+            "com.tencent.tmgp.sgame"
     };
 
     // Packages to Spoof as POCO F5
     private static final String[] packagesToChangeF5 = {
-        "com.dts.freefiremax",
-        "com.dts.freefireth",
-        "com.mobile.legends"
+            "com.dts.freefiremax",
+            "com.dts.freefireth"
     };
 
     // Packages to Spoof as Black Shark 4
     private static final String[] packagesToChangeBS4 = {
-        "com.proximabeta.mf.uamo"
+            "com.proximabeta.mf.uamo"
     };
 
     // Packages to Spoof as iQOO 11 Pro
     private static final String[] packagesToChangeiQ11P = {
-        "com.tencent.KiHan",
-        "com.tencent.tmgp.cf",
-        "com.tencent.tmgp.cod",
-        "com.tencent.tmgp.gnyx"
+            "com.tencent.KiHan",
+            "com.tencent.tmgp.cf",
+            "com.tencent.tmgp.cod",
+            "com.tencent.tmgp.gnyx"
     };
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam loadPackageParam) {
 
         String packageName = loadPackageParam.packageName;
+
+        // OnePlus
+        if (Arrays.asList(packagesToChangeOP15).contains(packageName)) {
+            propsToChangeOP15();
+            XposedBridge.log("spoofedd " + packageName + " as OnePlus 15");
+        }
 
         // Asus
         if (Arrays.asList(packagesToChangeROG6).contains(packageName)) {
@@ -160,6 +171,13 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
             propsToChangeMI13P();
             XposedBridge.log("Spoofed " + packageName + " as Xiaomi Mi 13 Pro");
         }
+    }
+
+    // OnePlus
+    // Props to Spoof as OnePlus 15
+    private static void propsToChangeOP15() {
+        setPropValue("MANUFACTURER", "OnePlus");
+        setPropValue("MODEL", "PLK110");
     }
 
     // Asus

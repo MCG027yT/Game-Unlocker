@@ -3,15 +3,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion "33.0.1"
+    compileSdkVersion 36
 
     defaultConfig {
-        applicationId "io.github.rushiranpise.gameunlocker"
+        applicationId 'com.incognitoDev.gameunlocker'
         minSdkVersion 28
-        targetSdkVersion 33
+        targetSdkVersion 36
         versionCode 4
-        versionName "7.0.0"
+        versionName "7.0.2-Dev"
     }
 
     buildTypes {
@@ -27,7 +26,7 @@ android {
     }
 
     dependenciesInfo.includeInApk false
-    namespace 'io.github.rushiranpise.gameunlocker'
+    namespace 'com.incognitoDev.gameunlocker'
 }
 
 dependencies {
